@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title>JGrid</title>
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="jgrid.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="HandheldFriendly" content = "true">
+</head>
+<body>
+	<section id='controls'>
+		<form name='controlsForm' action='#' method='post' class='clearfix'>
+			<div>
+				<label for='gridHeight'>Height</label>
+				<select name='gridHeight' id='gridHeight'></select>
+			</div>
+			<div>
+				<label for='gridWidth'>Width</label>
+				<select name='gridWidth' id='gridWidth'></select>
+			</div>
+			<div>
+				<label for='pattern'>Pattern</label>
+				<select name='pattern' id='pattern'></select>
+			</div>
+			<div>
+				<label for='speed'>Speed</label>
+				<select name='speed' id='speed'></select>
+			</div>
+			<div>
+				<label for='autoClick'>Auto</label>
+				<select name='autoClick' id='autoClick'>
+					<option>on</option>
+					<option selected>off</option>
+				</select>
+			</div>
+		</form>
+	</section> <!-- #controls -->
+	<section id='gridArea'>
+		<div id='grid' class='clearfix'></div>
+	</section>
+	<script type='text/javascript' src='jgrid.js'></script>
+</body>
+</html>
