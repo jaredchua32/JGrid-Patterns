@@ -266,6 +266,8 @@
 			$(window).on('resize', function() {
 				JGrid.adjustBoxSize();
 			})
+			//
+			console.log($gridElements[2][0]);
 		},
 
 		initGUI: function() {
@@ -394,9 +396,9 @@
 			JGrid.initGrid();
 		}
 
-	}, jg = JGrid;  // end JGrid.
+	}; // end JGrid.
 	
-	jg.init({
+	JGrid.init({
 		// Override grid settings here.
 	});
 
