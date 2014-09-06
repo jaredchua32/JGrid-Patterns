@@ -25,38 +25,81 @@
 		height: 9,
 		width: 9,
 		speed: 150,
-		pattern: 'box',
+		pattern: 'Box',
 		autoClick: 'off'
 	};
 
 	var JGrid = {
-		patterns: {
-			box: {
-				list:	[[7,0,1],[1],[1,2,3],[3],
-						[3,4,5],[5],[5,6,7],[7],
-						[0,1,2,3,4,5,6,7]],
+		Patterns: {
+			Box: {
+				list:	[
+					[7,0,1],
+					[1],
+					[1,2,3],
+					[3],
+					[3,4,5],
+					[5],
+					[5,6,7],
+					[7],
+					[0,1,2,3,4,5,6,7]
+				]
 			},
 
-			star: {
-				list:	[[0],[1],[2],[3],[4],[5],[6],[7],
-						[0,1,2,3,4,5,6,7]]
+			Star: {
+				list:	[
+					[0],
+					[1],
+					[2],
+					[3],
+					[4],
+					[5],
+					[6],
+					[7],
+					[0,1,2,3,4,5,6,7]
+				]
 			},
 
-			plus: {
-				list: 	[[null],[1],[null],[3],
-						[null],[5],[null],[7],
-						[1,3,5,7]],
+			Plus: {
+				list: 	[
+					[null],
+					[1],
+					[null],
+					[3],
+					[null],
+					[5],
+					[null],
+					[7],
+					[1,3,5,7]
+				]
 			},
 
-			x: {
-				list:	[[0],[null],[2],[null],
-						[4],[null],[6],[null],
-						[0,2,4,6]],
+			X: {
+				list:	[
+					[0],
+					[null],
+					[2],
+					[null],
+					[4],
+					[null],
+					[6],
+					[null],
+					[0,2,4,6]
+				]
 			},
 
-			flower: {
-				list:	[[1],[2],[3],[4],[5],
-						[6],[7],[0],[0,1,2,3,4,5,6,7,8]],
+			Flower: {
+				list:	[
+					[1],
+					[2],
+					[3],
+					[4],
+					[5],
+					[6],
+					[7],
+					[0],
+					[0,1,2,3,4,5,6,7,8]
+				],
+
 				lives: 9
 			}			
 		},
@@ -68,7 +111,7 @@
 		},
 
 		getNeighbors: function(pattern, direction) {
-			return JGrid.patterns[pattern].list[direction];
+			return JGrid.Patterns[pattern].list[direction];
 		},
 
 		activate: function($box, direction, life) {
@@ -291,7 +334,7 @@
 			});
 
 			/* Pattern <select> */
-			for(var obj in JGrid.patterns) { 
+			for(var obj in JGrid.Patterns) { 
 					var $newOption = $('<option>').text(obj);
 
 					if(obj === grid.pattern) {
@@ -304,7 +347,7 @@
 				var value = e.target.value;
 
 				grid.pattern = value;
-				grid.lives = JGrid.patterns[value].lives;
+				grid.lives = JGrid.Patterns[value].lives;
 
 				JGrid.disableAutoClick();				
 			});
