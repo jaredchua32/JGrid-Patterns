@@ -126,8 +126,7 @@
 				y = $parent.children().index($box);
 			
 			var thisBox = $box;
-				thisBox.addClass('activated'),
-				allowedNeighbors = [];
+				thisBox.addClass('activated');
 
 			setTimeout(function() {
 				thisBox.removeClass('activated');

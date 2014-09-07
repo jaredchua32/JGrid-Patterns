@@ -26,11 +26,8 @@ Users may choose to enable the Auto-Click feature of JGrid, which activates a ra
 
 ## For Developers
 
-**Coming Soon**
+Please check the [Wiki](https://github.com/jaredchua32/JGrid-Patterns/wiki).
 
-## For Users
-
-**Coming Soon**
 
 ## Installation
 
