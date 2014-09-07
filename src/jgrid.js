@@ -16,6 +16,7 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */	
 
 (function() {
+	var a = 0;
 	var autoHandler,
 		$grid = $('#grid'),
 		$gridElements = $([]);
@@ -308,8 +309,6 @@
 			$(window).on('resize', function() {
 				JGrid.adjustBoxSize();
 			})
-			//
-			console.log($gridElements[2][0]);
 		},
 
 		initGUI: function() {
@@ -426,22 +425,48 @@
 			window.clearInterval(autoHandler);
 		},
 
-		extendSettings: function(config) {
+		extendSettings: function(config, customPatterns) {
 			$.extend(grid, config);
 			grid.maxHeight = grid.height;
 			grid.maxWidth = grid.width;
+			$.extend(JGrid.Patterns, customPatterns);
 		},
 
-		init: function(config) {
-			JGrid.extendSettings(config);
+		init: function(config, customPatterns) {
+			JGrid.extendSettings(config, customPatterns);
 			JGrid.initGUI();	
 			JGrid.initGrid();
 		}
 
 	}; // end JGrid.
 	
-	JGrid.init({
-		// Override grid settings here.
+	JGrid.init(
+	{ 
+		// config - Override grid settings here.
+
+		// height: 25,
+		// width: 25,
+		// pattern: 'PatternName'
+	},
+
+	{
+		// customPatterns - Modify existing or add new patterns here.
+		
+		/* PatternName: {
+			list: [
+				[0],
+				[1],
+				[2],
+				[3],
+				[4],
+				[5],
+				[6],
+				[7],
+				[0,1,2,3,4,5,6,7]
+			],
+
+			lives: 1 // Optional.
+		} */
 	});
 
 })();
