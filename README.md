@@ -36,11 +36,11 @@ In order to run JGrid, you may choose to:
 
 The following are links to the Source Code of JGrid:
 
-* [jgrid.html](https://raw.githubusercontent.com/jaredchua32/JGrid/master/jgrid.html)
+* [jgridpatterns.html](https://raw.githubusercontent.com/jaredchua32/JGrid-Patterns/master/src/html/jgridpatterns.html)
 
-* [jgrid.css](https://raw.githubusercontent.com/jaredchua32/JGrid/master/jgrid.css)
+* [jgridpatterns.css](https://raw.githubusercontent.com/jaredchua32/JGrid-Patterns/master/src/css/jgridpatterns.css)
 
-* [jgrid.js](https://raw.githubusercontent.com/jaredchua32/JGrid/master/jgrid.js)
+* [jgridpatterns.js](https://raw.githubusercontent.com/jaredchua32/JGrid-Patterns/master/src/js/jgridpatterns.js)
 
 ### Checkout the Source
 
