@@ -48,4 +48,4 @@ The following are links to the Source Code of JGrid:
 
 and then open jgrid.html with your favorite browser.
 
-### Or view [JGrid](http://jaredchua.com/demos/jgrid.html) from my site.
+### Or view [JGrid-Patterns](http://jaredchua.com/jgridpatterns/jgridpatterns.html) from my site.
